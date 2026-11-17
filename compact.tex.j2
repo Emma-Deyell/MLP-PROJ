@@ -1,0 +1,40 @@
+((* extends 'latex/index.tex.j2' *))
+
+((* block docclass *))
+\documentclass[10pt,a4paper]{article}
+((* endblock docclass *))
+
+((* block predoc *))
+((* endblock predoc *))
+
+((* block definitions *))
+((( super() )))
+
+% Remove automatic title and contents
+\renewcommand{\maketitle}{}
+\renewcommand{\tableofcontents}{}
+
+% Reduce paragraph spacing
+\setlength{\parskip}{3pt}
+\setlength{\parindent}{0pt}
+\linespread{0.95}
+
+% Reduce heading spacing
+\usepackage{titlesec}
+\titlespacing*{\section}{0pt}{10pt}{4pt}
+\titlespacing*{\subsection}{0pt}{8pt}{3pt}
+\titlespacing*{\subsubsection}{0pt}{6pt}{2pt}
+
+% Reduce figure spacing
+\setlength{\textfloatsep}{6pt}
+\setlength{\floatsep}{6pt}
+\setlength{\intextsep}{6pt}
+
+% Reduce code size
+\fvset{fontsize=\scriptsize,baselinestretch=0.85}
+
+((* endblock definitions *))
+
+((* block margins *))
+\geometry{margin=1.5cm}
+((* endblock margins *))
